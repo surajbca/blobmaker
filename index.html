@@ -8,7 +8,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="./Blobmaker/Blobmaker.css">
-    <link rel="stylesheet" href="./Blobmaker/css2">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="./Blobmaker/ButtonColor.js"></script>
+    <script src="./Blobmaker/Download.js"></script>
 </head>
 
 <body>
@@ -32,7 +36,7 @@
                 </div>
             </div>
             <div class="column secondDiv">
-                <figure class="image is-150x150" style="margin: 20px 20px 20px 20px;">
+                <figure class="image is-150x150" style="margin: 20px 20px 20px 20px;" id="svgImg">
                     <svg viewBox="0 0 200 200" class="css-lld9th">
                         <g transform="translate(100 100)">
                             <path
@@ -46,10 +50,10 @@
                 </div>-->
             </div>
             <div class="column has-text-right">
-                <a class="level-item" aria-label="reply" style="margin-left: 315px;">
+                <a class="level-item" aria-label="reply" style="margin-left: 315px; ">
                     <span class="icon is-small ">
                         <svg viewBox="0 0 24 24" focusable="false" role="presentation" class="css-1im46kq">
-                            <path fill="currentcolor"
+                            <path fill="#000000"
                                 d="M24 4.37a9.6 9.6 0 0 1-2.83.8 5.04 5.04 0 0 0 2.17-2.8c-.95.58-2 1-3.13 1.22A4.86 4.86 0 0 0 16.61 2a4.99 4.99 0 0 0-4.79 6.2A13.87 13.87 0 0 1 1.67 2.92 5.12 5.12 0 0 0 3.2 9.67a4.82 4.82 0 0 1-2.23-.64v.07c0 2.44 1.7 4.48 3.95 4.95a4.84 4.84 0 0 1-2.22.08c.63 2.01 2.45 3.47 4.6 3.51A9.72 9.72 0 0 1 0 19.74 13.68 13.68 0 0 0 7.55 22c9.06 0 14-7.7 14-14.37v-.65c.96-.71 1.79-1.6 2.45-2.61z">
                             </path>
                         </svg>
@@ -63,11 +67,48 @@
                 <div class="box boxmargin">
                     <nav class="level">
                         <div class="control has-icons-left has-icons-right">
-                            <input class="input is-medium" type="text" value="#FF0066">
+                            <input class="" id="inputValue" type="button" value="#FF0066"
+                                style="padding: 16px 69px 10px 10px;" onclick="buttonColor()" />
+                            <!--oninput="updateInput(value)"-->
+                            <button class=" icon is-right radiusButtonIcon" onclick="buttonColor()" id="buttonColor">
 
-                            <span class="icon is-right radiusButtonIcon">
-                                <i class="fas fa-check"></i>
-                            </span>
+                            </button>
+                        </div>
+
+                        <div class="box" id="buttonDiv" style="display: none;">
+                            <div class="buttons">
+                                <button class="button" style="background: #FF0066;" id="btn1"
+                                    onclick="btn1('#FF0066')"></button>
+                                <button class="button" style="background: #8A3FFC;" id="btn2"
+                                    onclick="btn2('#8A3FFC')"></button>
+                                <button class="button" style="background: #FA4D56;" id="btn3"
+                                    onclick="btn3('#FA4D56')"></button>
+                                <button class="button" style="background: #F1C21B;" id="btn4"
+                                    onclick="btn4('#F1C21B')"></button>
+                                <button class="button" style="background: #08BDBA;" id="btn5"
+                                    onclick="btn5('#08BDBA')"></button>
+                                <button class="button" style="background: #0F62FE;" id="btn6"
+                                    onclick="btn6('#0F62FE')"></button>
+                                <button class="button" style="background: #24A148;" id="btn7"
+                                    onclick="btn7('#24A148')"></button>
+                            </div>
+
+                            <div class="buttons">
+                                <button class="button" style="background: #A7F0BA;" id="btn8"
+                                    onclick="btn8('#A7F0BA')"></button>
+                                <button class="button" style="background: #9EF0F0;" id="btn9"
+                                    onclick="btn9('#9EF0F0')"></button>
+                                <button class="button" style="background: #BAE6FF;" id="btn10"
+                                    onclick="btn10('#BAE6FF')"></button>
+                                <button class="button" style="background: #D0E2FF;" id="btn11"
+                                    onclick="btn11('#D0E2FF')"></button>
+                                <button class="button" style="background: #E8DAFF;" id="btn12"
+                                    onclick="btn12('#E8DAFF')"></button>
+                                <button class="button" style="background: #FFD6E8;" id="btn13"
+                                    onclick="btn13('#FFD6E8')"></button>
+                                <button class="button" style="background: #F2F4F8;" id="btn14"
+                                    onclick="btn14('#F2F4F8')"></button>
+                            </div>
                         </div>
                         <div class="level-item ">
                             <a class="level-item" aria-label="reply">
@@ -84,14 +125,16 @@
                             </a>
 
                         </div>
-                        <div class="level-item ">
-                            <button class="icon  radiusButton">
+                        <!--<div class="level-item ">-->
+                        <!-- <progress class="progress is-small" value="20" max="100">20%</progress>-->
+                        <input type="range" class="styled-slider slider-progress" style="width: 12em;" />
+                        <!--<button class="icon  radiusButton">
 
-                            </button>
-                        </div>
-                        <div class="level-item has-text-centered has-text-warning button">
-                        </div>
-                        <div class="level-item has-text-centered">
+                            </button>-->
+                        <!--</div>-->
+                        <!--<div class="level-item has-text-centered  buttonHeight">
+                        </div>-->
+                        <div class="level-item">
                             <a class="level-item" aria-label="reply">
                                 <span class="icon is-small">
                                     <a class="level-item" aria-label="reply">
@@ -119,7 +162,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="level-item has-text-centered">
+                        <div class="level-item">
                             <a class="level-item" aria-label="reply">
                                 <span class="icon  is-medium">
                                     <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="css-1of6a44">
@@ -140,15 +183,17 @@
                                 </g>
                             </svg>-->
                         </div>
-                        <div class="level-item has-text-centered ">
-                            <button class="icon  radiusButton">
+                        <!--<div class="level-item">-->
+                        <!--<progress class="progress is-small" value="20" max="100">20%</progress>-->
+                        <input type="range" class="styled-slider slider-progress" style="width: 12em;" />
+                        <!--<button class="icon  radiusButton">
 
-                            </button>
-                        </div>
-                        <div class="level-item has-text-centered button">
+                            </button>-->
+                        <!--</div>-->
+                        <!--<div class="level-item has-text-centered buttonHeight">
 
-                        </div>
-                        <div class="level-item has-text-centered">
+                        </div>-->
+                        <div class="level-item  ">
                             <a class="level-item" aria-label="reply">
                                 <span class="icon  is-medium">
                                     <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="css-9i4l85">
@@ -159,20 +204,22 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="level-item has-text-centered border">
-                            <a class="level-item" aria-label="reply">
-                                <span class="icon is-medium">
-                                    <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true"
-                                        class="css-1im46kq">
-                                        <path stroke="rgb(255, 0, 102)" stroke-width="2" fill="none"
-                                            d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7 5V12m4 5l-4 4-4-4">
-                                        </path>
-                                    </svg>
-                                </span>
-                            </a>
-
+                        <div class="level-item">
+                            <button class="ButtonBorder" onclick="downloadImage()">
+                                <a class="level-item" aria-label="reply">
+                                    <span class="icon is-medium">
+                                        <svg viewBox="0 0 24 24" focusable="false" role="presentation"
+                                            aria-hidden="true" class="css-1im46kq">
+                                            <path stroke="rgb(255, 0, 102)" stroke-width="2" fill="none"
+                                                d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7 5V12m4 5l-4 4-4-4">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </button>
                         </div>
-                        <div class="level-item has-text-centered border ml-2">
+                        <!--<div class="level-item  ml-2">-->
+                        <button class="ButtonBorder">
                             <a class="level-item" aria-label="reply">
                                 <span class="icon is-medium">
                                     <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true"
@@ -184,26 +231,29 @@
                                     </svg>
                                 </span>
                             </a>
-                        </div>
-                        <div class="level-item has-text-centered ml-2"
-                            style="background: rgb(255, 0, 102); border-radius: 50%;height: 75px; width: 9px; color: #f5f5f5;">
-                            <a class="level-item" aria-label="reply">
-                                <span class="icon is-medium">
-                                    <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="css-1oizbix">
-                                        <path stroke="none" fill="#f5f5f5"
-                                            d="M7.38 5.555l15.592-1.367A3.419 3.419 0 0126.673 7.3L28.05 23.06a3.422 3.422 0 01-3.106 3.71L9.352 28.137a3.419 3.419 0 01-3.702-3.113L4.275 9.265a3.422 3.422 0 013.106-3.71zm.2 2.274a1.14 1.14 0 00-1.036 1.237l1.375 15.759a1.14 1.14 0 001.234 1.038l15.591-1.368a1.14 1.14 0 001.036-1.236l-1.376-15.76a1.14 1.14 0 00-1.234-1.037L7.58 7.829zm3.254 5.39a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.839zm10.065-.883a1.69 1.69 0 01-1.826-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.84zM11.72 23.373a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.545 1.692 1.692 0 01-1.53 1.84zm10.065-.883a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.84zm-5.476-4.635a1.69 1.69 0 01-1.825-1.546 1.692 1.692 0 011.53-1.839 1.69 1.69 0 011.825 1.545 1.692 1.692 0 01-1.53 1.84zM29.183 6.823l-.015.002A.915.915 0 0128.167 6c-.265-2.544-2.523-4.39-5.045-4.121h-.007a.916.916 0 01-1.002-.824.922.922 0 01.808-1.018h.002l.007-.001a6.387 6.387 0 014.718 1.408 6.498 6.498 0 012.347 4.363.922.922 0 01-.812 1.016zM8.547 32h-.008a6.395 6.395 0 01-4.578-1.818 6.51 6.51 0 01-1.96-4.553.92.92 0 01.895-.942h.016c.503-.008.917.4.926.91.044 2.559 2.134 4.595 4.67 4.55h.006a.918.918 0 01.927.91.92.92 0 01-.894.943z">
-                                        </path>
-                                    </svg>
-                                </span>
-                            </a>
+                        </button>
+                        <!-- </div>-->
+                        <div class="level-item  ml-2">
+                            <button class="border">
+                                <a class="level-item" aria-label="reply">
+                                    <span class="icon is-medium">
+                                        <svg viewBox="0 0 32 32" focusable="false" role="presentation"
+                                            class="css-1oizbix">
+                                            <path stroke="none" fill="#f5f5f5"
+                                                d="M7.38 5.555l15.592-1.367A3.419 3.419 0 0126.673 7.3L28.05 23.06a3.422 3.422 0 01-3.106 3.71L9.352 28.137a3.419 3.419 0 01-3.702-3.113L4.275 9.265a3.422 3.422 0 013.106-3.71zm.2 2.274a1.14 1.14 0 00-1.036 1.237l1.375 15.759a1.14 1.14 0 001.234 1.038l15.591-1.368a1.14 1.14 0 001.036-1.236l-1.376-15.76a1.14 1.14 0 00-1.234-1.037L7.58 7.829zm3.254 5.39a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.839zm10.065-.883a1.69 1.69 0 01-1.826-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.84zM11.72 23.373a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.545 1.692 1.692 0 01-1.53 1.84zm10.065-.883a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.84zm-5.476-4.635a1.69 1.69 0 01-1.825-1.546 1.692 1.692 0 011.53-1.839 1.69 1.69 0 011.825 1.545 1.692 1.692 0 01-1.53 1.84zM29.183 6.823l-.015.002A.915.915 0 0128.167 6c-.265-2.544-2.523-4.39-5.045-4.121h-.007a.916.916 0 01-1.002-.824.922.922 0 01.808-1.018h.002l.007-.001a6.387 6.387 0 014.718 1.408 6.498 6.498 0 012.347 4.363.922.922 0 01-.812 1.016zM8.547 32h-.008a6.395 6.395 0 01-4.578-1.818 6.51 6.51 0 01-1.96-4.553.92.92 0 01.895-.942h.016c.503-.008.917.4.926.91.044 2.559 2.134 4.595 4.67 4.55h.006a.918.918 0 01.927.91.92.92 0 01-.894.943z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </button>
                         </div>
                     </nav>
                 </div>
                 <div class="cantant">
                     <div>
                         <p class="is-size-4">Blobmaker is a free generative design tool made with 💕 by</p>
-                        <a href="https://www.zcreativelabs.com/" class="is-size-4">z creative labs</a>,<p
-                            class="is-size-4"> to help you
+                        <a href="https://www.zcreativelabs.com/" class="is-size-4" style="color: #FF0066;">z creative
+                            labs</a>,<p class="is-size-4"> to help you
                             quickly create random, unique, and organic-looking SVG shapes.</p>
                     </div>
 
@@ -216,7 +266,7 @@
                     <div class="mt-6">
                         <p class="from-landing is-size-5">From landing pages to illustrations, <a
                                 href="https://medium.com/@usonesinbetween/2017-the-year-of-the-blob-a3d899c9b071"
-                                class="">blobs
+                                class="" style="color: #FF0066;">blobs
                                 are
                                 everywhere</a>! Creating smooth, organic-looking shapes can
                             be difficult, especially when you need many different ones. Blobmaker makes it easy to
@@ -253,7 +303,7 @@
                                                 </span>
                                             </a>
                                             If you like SVG shape generators, try <a href="https://getwaves.io/"
-                                                class="">getwaves.io</a>, and make
+                                                class="" style="color: #FF0066;">getwaves.io</a>, and make
                                             some cool wave transitions for your web
                                             pages.
                                             </a>
@@ -267,13 +317,16 @@
                                                 </span>
                                             </a>
                                             Have a minute? Challenge yourself with our fun geo quiz!
-                                            <span class="icon is-small ">
-                                                <svg viewBox="0 0 24 24" focusable="false" role="presentation" class="">
-                                                    <path fill="currentColor"
-                                                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
-                                                    </path>
-                                                </svg>
-                                            </span>
+                                            <a style="color: rgb(255, 0, 102);">Start playing
+                                                <span class="icon is-small ">
+
+                                                    <svg viewBox="0 0 24 24" focusable="false" role="presentation"
+                                                        class="">
+                                                        <path fill="currentColor"
+                                                            d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
                                             </a>
                                         </p>
                                     </div>
@@ -284,8 +337,8 @@
                                 <div>
                                     <p class="">Are you looking for a creative code+design team for your next
                                         project?
-                                        Let's chat!<br><a href="mailto:hello@zcreativelabs.com"
-                                            class="">hello@zcreativelabs.com</a></p>
+                                        Let's chat!<br><a href="mailto:hello@zcreativelabs.com" class=""
+                                            style="color: #FF0066;">hello@zcreativelabs.com</a></p>
                                 </div>
                             </div>
                         </div>
