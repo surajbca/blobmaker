@@ -11,13 +11,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="./Blobmaker/ButtonColor.js"></script>
     <script src="./Blobmaker/Download.js"></script>
+    <script src="./Blobmaker/SvgCodeCopy.js"></script>
 </head>
 
 <body>
     <nav class="navbar is-primary">
-
         <p class="mt-3 is-size-6" style="margin-left: 484px;">Blobmaker is now a part of <span
                 class="">Haikei.app</span>.
             Try it out for free!</p>
@@ -35,11 +36,11 @@
                     </a>
                 </div>
             </div>
-            <div class="column secondDiv">
+            <div class="column secondDiv" id="svgDownloadImg">
                 <figure class="image is-150x150" style="margin: 20px 20px 20px 20px;" id="svgImg">
-                    <svg viewBox="0 0 200 200" class="css-lld9th">
+                    <svg viewBox="0 0 200 200" class="css-lld9th" id="svgCodeCopy">
                         <g transform="translate(100 100)">
-                            <path
+                            <path id="circle1"
                                 d="M60.6,-19.4C68.8,5.6,59.1,36.7,37.6,52.4C16.2,68.2,-16.9,68.5,-37.5,53.1C-58.2,37.8,-66.3,6.8,-58,-18.4C-49.7,-43.5,-24.8,-62.8,0.7,-63.1C26.2,-63.3,52.4,-44.4,60.6,-19.4Z"
                                 fill="#FF0066"></path>
                         </g>
@@ -62,6 +63,24 @@
                 </a>
             </div>
         </div>
+        <!--start popup-->
+        <div class="modal" id="popup">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Modal title</p>
+                    <button class="delete" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <!-- Content ... -->
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button">Cancel</button>
+                </footer>
+            </div>
+        </div>
+        <!--end popup-->
         <div class="backgroundImg ">
             <div class="backgroundcolor">
                 <div class="box boxmargin">
@@ -219,7 +238,9 @@
                             </button>
                         </div>
                         <!--<div class="level-item  ml-2">-->
-                        <button class="ButtonBorder">
+
+
+                        <button class="ButtonBorder js-modal-trigger" data-target="modal-js-example">
                             <a class="level-item" aria-label="reply">
                                 <span class="icon is-medium">
                                     <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true"
