@@ -14,6 +14,7 @@ function updateInput(value) {
 function btn1(color) {
   const btn1 = document.getElementById("buttonColor");
   const circle1 = document.getElementById("circle1");
+  alert(circle1)
   btn1.style.background = color;
   btn1.style.border = color;
   circle1.style.fill = color;
