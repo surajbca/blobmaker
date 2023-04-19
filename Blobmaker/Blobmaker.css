@@ -49,8 +49,8 @@ margin-top: 140px;
     height: 60px;
         width: 60px;
         border-radius: 100%;
-        background: rgb(255, 0, 102);
-        border: solid rgb(255, 0, 102);
+        background: #08BDBA;
+        border: solid #08BDBA;
         
 }
 
@@ -63,30 +63,31 @@ margin-top: 140px;
 }
 
 .radiusButton{
-    background: rgb(255, 0, 102);
+    background: #08BDBA;
         border-radius: 100%;
         width: 33px !important;
         height: 33px !important;
 }
 .radiusButtonIcon{
-    background: rgb(255, 0, 102);
+    background: #08BDBA;
         border-radius: 100%;
         width: 30px !important;
         height: 30px !important;
         margin: 8px 13px 1px 1px;
-        border: solid rgb(255, 0, 102);
+        border: solid #08BDBA;
 }
 
 #buttonDiv{
     position: absolute;
-        height: 152px;
-        width: 348px;
-        margin-top: 241px;
+        height: 145px;
+        width: 346px;
+        margin-top: 230px;
+        margin-left: 55px;
 }
 
 .ButtonBorder{
     width: 50px;
         height: 50px;
         border-radius: 100%;
-        border: solid red;
+        border: solid #08BDBA;
 }

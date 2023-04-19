@@ -14,14 +14,18 @@
 // }
 
 function rangeElement1() {
-  const circle1 = document.getElementById("circle1");
-  alert(circle1);
-  circle1.style.width = 200;
-  circle1.style.height = 200;
+  //const circle1 = document.getElementById("circle1");
+  //alert("Id: " + JSON.stringify(circle1));
+
+  //circle1.style.fill = "#24A148";
+  circle1.style.border = "30% 70% 70% 30% / 30% 30% 70% 70%";
+  //"M50.8,-17.4C59.5,10.4,56,41.3,38.6,54.2C21.1,67.2,-10.2,62.1,-31.5,46C-52.8,29.9,-64.1,2.7,-57.2,-22.6C-50.3,-47.9,-25.2,-71.3,-2.1,-70.6C21,-69.9,42,-45.2,50.8,-17.4Z";
+  circle1.style.height = 100;
 }
 
 function rangeElement2() {
   const rangeElement2 = document.getElementById("svgCodeCopy");
+  alert();
   /*let range = document.getElementById("rangeElement1");*/
   ///alert(circle1);
   //alert(range.value);

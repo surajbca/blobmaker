@@ -47,3 +47,59 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+/*function htmlEncode(html) {
+  html = trim(html);
+  return html.replace(/[&"'\<\>]/g, function (c) {
+    switch (c) {
+      case "&":
+        return "&amp;";
+      case "'":
+        return "&#39;";
+      case '"':
+        return "&quot;";
+      case "<":
+        return "&lt;";
+      default:
+        return "&gt;";
+    }
+  });
+}*/
+
+//"#CopySvgCode".html(htmlEncode("#CopySvgCode".html()));
+
+function htmlEncode(html) {
+  html = $.trim(html);
+  return html.replace(/[&"'\<\>]/g, function (c) {
+    switch (c) {
+      case "&":
+        return "&amp;";
+      case "'":
+        return "&#39;";
+      case '"':
+        return "&quot;";
+      case "<":
+        return "&lt;";
+      default:
+        return "&gt;";
+    }
+  });
+}
+
+$("#example").html(htmlEncode($("#example").html()));
+
+function myFunction() {
+  // Get the text field
+
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  //alert("Copied the text: " + copyText.value);
+}
