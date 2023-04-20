@@ -91,3 +91,7 @@ margin-top: 140px;
         border-radius: 100%;
         border: solid #08BDBA;
 }
+
+button {
+    display: block;
+}
