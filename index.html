@@ -178,11 +178,20 @@
                     <button class="delete" aria-label="close"></button>
                 </header>
                 <section class="modal-card-body" id="CopySvgCode">
-                    <input type="text" value="Hello World" id="myInput">
+                    <textarea disabled id="myInput" style="height: 116px; width: 603px;">
+                    <svg viewBox="0 0 200 200" class="css-lld9th" id="svgCodeCopy">
+                        <g transform="translate(100 100)">
+                            <path id="circle1"
+                                d="M60.6,-19.4C68.8,5.6,59.1,36.7,37.6,52.4C16.2,68.2,-16.9,68.5,-37.5,53.1C-58.2,37.8,-66.3,6.8,-58,-18.4C-49.7,-43.5,-24.8,-62.8,0.7,-63.1C26.2,-63.3,52.4,-44.4,60.6,-19.4Z"
+                                fill="#08BDBA"></path>
+                        </g>
+                    </svg>
+                    </textarea>
+                    <!-- <input disabled type="text" value="Hello World" id="myInput">-->
                 </section>
                 <footer class="modal-card-foot">
                     <button class="Copy SVG to clipboard" style="background: #08BDBA; color: white ;"
-                        onclick="myFunction()">Copy SVG to clipboard</button>
+                        onclick="copyText()">Copy SVG to clipboard</button>
                     <!--<button class="button">Cancel</button>-->
                 </footer>
             </div>
@@ -359,7 +368,7 @@
                         </button>
                     </div>
                     <div class="level-item  ml-2">
-                        <button class="border">
+                        <button class="border" onclick="rangeElement3()">
                             <a class="level-item" aria-label="reply">
                                 <span class="icon is-medium">
                                     <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="css-1oizbix">

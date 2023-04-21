@@ -48,7 +48,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/*function htmlEncode(html) {
+/*html tag*/
+/*
+function htmlEncode(html) {
   html = trim(html);
   return html.replace(/[&"'\<\>]/g, function (c) {
     switch (c) {
@@ -68,29 +70,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //"#CopySvgCode".html(htmlEncode("#CopySvgCode".html()));
 
-function htmlEncode(html) {
-  html = $.trim(html);
-  return html.replace(/[&"'\<\>]/g, function (c) {
-    switch (c) {
-      case "&":
-        return "&amp;";
-      case "'":
-        return "&#39;";
-      case '"':
-        return "&quot;";
-      case "<":
-        return "&lt;";
-      default:
-        return "&gt;";
-    }
-  });
-}
-
-$("#example").html(htmlEncode($("#example").html()));
-
 function myFunction() {
   // Get the text field
-
+  alert("");
   var copyText = document.getElementById("myInput");
 
   // Select the text field
@@ -102,4 +84,12 @@ function myFunction() {
 
   // Alert the copied text
   //alert("Copied the text: " + copyText.value);
+}
+
+function copyText() {
+  var copyText = document.getElementById("myInput");
+  copyText.style.background = "#08BDBA";
+  copyText.style.color = "white";
+  navigator.clipboard.writeText(copyText.innerText);
+  alert("Copied the text: " + copyText.innerText);
 }
