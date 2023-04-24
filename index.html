@@ -29,63 +29,181 @@
         <div class="columns mt-5">
             <div class="column">
                 <div class="mr-6">
-                    <!--<a class="level-item has-text-justified" aria-label="reply" style="margin-right: 142px;">
-                        <span class="icon icon is-large mdi mdi-48px" style="height: 30px;">
-                            <img class="css-k8jt"
-                                src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNzJweCIgaGVpZ2h0PSI3MnB4IiB2aWV3Qm94PSIwIDAgNzIgNzIiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDUxLjMgKDU3NTQ0KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5BcnRib2FyZCA4IENvcHkgMzwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJBcnRib2FyZC04LUNvcHktMyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTEzLjk4MDE5MDIsNDkuNjcxMTgxMyBDNi41MzI2MzgxNCwzNS44MDA0ODAyIDI1LjEzMTgxNTgsNi4wMzc2MTE2MiA0MS44Nzg5NTY4LDUuMDI2ODc4MzYgQzU4LjYyNjA5NzcsNC4wMTYxNDUxMSA3My41MjEyMDE5LDMxLjc1NzU0NzIgNjQuMjIxNjEzLDQ2LjYzODk4MTUgQzU0LjkyMjAyNDIsNjEuNTIwNDE1OCAyMS40Mjc3NDIzLDYzLjU0MTg4MjMgMTMuOTgwMTkwMiw0OS42NzExODEzIFoiIGlkPSJTaGFwZS1Db3B5LTYiIGZpbGw9IiNGRjk5MzMiIGZpbGwtcnVsZT0ibm9uemVybyI+PC9wYXRoPgogICAgICAgIDxwYXRoIGQ9Ik00MC4xNzkxNTgyLDM1LjYzNzQwNTEgQzQ1LjgxMTg5NTksNDIuMTQyNzk4IDU0Ljc0MDkzNzYsNDYuNTc3MzEyOCA1NS42ODE4OTM5LDUxLjg4ODY3NzcgQzU2LjYyMjg1MDIsNTcuMjAwMDQyNSA0OS41NzU3MjExLDYzLjM4ODI1NzQgNDIuMzA5MjM4Nyw2NS40OTUxMjc3IEMzNS4wNDI3NTY0LDY3LjYwMTk5NzkgMjcuNTU2OTIwNyw2Ni42Mjc1MjM2IDIxLjI5MTE3NTcsNjMuMTk2NDkxIEMxNS4wMjU0MzA3LDU5Ljc2NTQ1ODQgOS45Nzk3NzYzNiw1My44Nzc4Njc0IDcuMTg5ODczNTYsNDYuOTU3NjIwNCBDNC4zOTk5NzA3Niw0MC4wMzczNzMzIDMuODY1ODE5NTMsMzEuMDg0NDcwMSA4LjAyMjM5MTQ1LDI0LjkxNjAwMjMgQzEyLjE3ODk2MzQsMTguNzQ3NTM0NiAyMS4wMjYyNTg0LDE1LjM2MzUwMjMgMjYuNjE4MTIyNywxNy45NTk2MjE3IEMzMi4yMDk5ODcsMjAuNTU1NzQxMSAzNC41NDY0MjA2LDI5LjEzMjAxMjIgNDAuMTc5MTU4MiwzNS42Mzc0MDUxIiBpZD0iU2hhcGUtQ29weS01IiBmaWxsPSIjRkYwMDY2IiBmaWxsLXJ1bGU9Im5vbnplcm8iPjwvcGF0aD4KICAgICAgICA8cGF0aCBkPSJNNTIuNjgyNDQwMiw0My45OTIgQzUyLjY4MjQ0MDIsNTEuMzg0IDQ2LjI1MDQ0MDIsNTQuNiAzOS4yOTA0NDAyLDU0LjYgTDIyLjc3ODQ0MDIsNTQuNiBMMjIuNzc4NDQwMiwxNy4wMTYgTDM5LjA1MDQ0MDIsMTcuMDE2IEM0Mi42MDI0NDAyLDE3LjAxNiA0Ni4yNTA0NDAyLDE4LjE2OCA0OC41NTQ0NDAyLDIwLjUyIEM1MC4xMzg0NDAyLDIyLjE1MiA1MS4wNTA0NDAyLDI0LjUwNCA1MS4wNTA0NDAyLDI2Ljk1MiBDNTEuMDUwNDQwMiwzMC43NDQgNDguNjUwNDQwMiwzMy41MjggNDUuMDUwNDQwMiwzNS4wMTYgTDQ1LjA1MDQ0MDIsMzUuMTYgQzQ5Ljg1MDQ0MDIsMzUuOTI4IDUyLjY4MjQ0MDIsMzkuNDggNTIuNjgyNDQwMiw0My45OTIgWiBNNDEuNjQyNDQwMiwyOC40ODggQzQxLjY0MjQ0MDIsMjYuMTg0IDM5Ljk2MjQ0MDIsMjUuMTI4IDM3LjMyMjQ0MDIsMjUuMTI4IEwzMS45NDY0NDAyLDI1LjEyOCBMMzEuOTQ2NDQwMiwzMS44OTYgTDM3LjQxODQ0MDIsMzEuODk2IEM0MC4xNTQ0NDAyLDMxLjg5NiA0MS42NDI0NDAyLDMwLjYgNDEuNjQyNDQwMiwyOC40ODggWiBNNDMuMjI2NDQwMiw0Mi44ODggQzQzLjIyNjQ0MDIsNDAuNDg4IDQxLjIxMDQ0MDIsMzkuMzg0IDM4LjkwNjQ0MDIsMzkuMzg0IEwzMS45NDY0NDAyLDM5LjM4NCBMMzEuOTQ2NDQwMiw0Ni40NCBMMzguOTU0NDQwMiw0Ni40NCBDNDEuMzU0NDQwMiw0Ni40NCA0My4yMjY0NDAyLDQ1LjI4OCA0My4yMjY0NDAyLDQyLjg4OCBaIiBpZD0iQi1Db3B5IiBmaWxsPSIjRkZGRkZGIj48L3BhdGg+CiAgICA8L2c+Cjwvc3ZnPg==">
-                        </span>
-                        By z creative labs
-                    </a>-->
-                    <!-- <button id="btn" onclick="ChangeShape()">Random</button> -->
+                    <div class="box" style="margin-left: 153px; ">
+                        <div class="columns">
+                            <div class="control has-icons-left has-icons-right column" style="margin-top: 40px;">
+                                <input class="" id="inputValue" type="button" value="#FF0066"
+                                    style="padding: 16px 329px 10px 10px;" onclick="buttonColor()"
+                                    oninput="updateInput(value)" />
+                                <button class=" icon is-right radiusButtonIcon" onclick="buttonColor()" id="buttonColor"
+                                    style="margin-top: 20px;">
+                                </button>
+                            </div>
+
+                            <div class="box" id="buttonDiv" style="display: none;">
+                                <div class="buttons">
+                                    <button class="button" style="background: #FF0066;" id="btn1"
+                                        onclick="btn1('#FF0066')"></button>
+                                    <button class="button" style="background: #8A3FFC;" id="btn2"
+                                        onclick="btn2('#8A3FFC')"></button>
+                                    <button class="button" style="background: #FA4D56;" id="btn3"
+                                        onclick="btn3('#FA4D56')"></button>
+                                    <button class="button" style="background: #F1C21B;" id="btn4"
+                                        onclick="btn4('#F1C21B')"></button>
+                                    <button class="button" style="background: #08BDBA;" id="btn5"
+                                        onclick="btn5('#08BDBA')"></button>
+                                    <button class="button" style="background: #0F62FE;" id="btn6"
+                                        onclick="btn6('#0F62FE')"></button>
+                                    <button class="button" style="background: #24A148;" id="btn7"
+                                        onclick="btn7('#24A148')"></button>
+                                </div>
+
+                                <div class="buttons">
+                                    <button class="button" style="background: #A7F0BA;" id="btn8"
+                                        onclick="btn8('#A7F0BA')"></button>
+                                    <button class="button" style="background: #9EF0F0;" id="btn9"
+                                        onclick="btn9('#9EF0F0')"></button>
+                                    <button class="button" style="background: #BAE6FF;" id="btn10"
+                                        onclick="btn10('#BAE6FF')"></button>
+                                    <button class="button" style="background: #D0E2FF;" id="btn11"
+                                        onclick="btn11('#D0E2FF')"></button>
+                                    <button class="button" style="background: #E8DAFF;" id="btn12"
+                                        onclick="btn12('#E8DAFF')"></button>
+                                    <button class="button" style="background: #FFD6E8;" id="btn13"
+                                        onclick="btn13('#FFD6E8')"></button>
+                                    <button class="button" style="background: #F2F4F8;" id="btn14"
+                                        onclick="btn14('#F2F4F8')"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns" style="margin-top: 40px;">
+                            <div class="level-item column">
+                                <a class="level-item" aria-label="reply">
+                                    <span class="icon is-medium">
+                                        <svg viewBox="0 0 40 40" focusable="false" role="presentation"
+                                            class="css-1of6a44">
+                                            <g stroke="#000000" stroke-width="2" fill="none">
+                                                <path d="M20 7L36 30L4 35L20 7Z" stroke="#08BDBA"></path>
+                                                <circle cx="20" cy="5" r="5" fill="#08BDBA" stroke="#FFF"></circle>
+                                                <circle cx="4" cy="35" r="5" fill="#08BDBA" stroke="#FFF"></circle>
+                                                <circle cx="36" cy="30" r="5" fill="#08BDBA" stroke="#FFF"></circle>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="level-item column">
+                                <input type="range" class="styled-slider slider-progress" style="width: 12em;"
+                                    onclick="rangeElement1()" id="rangeElement1" />
+                            </div>
+                            <div class="column">
+                                <a class="" aria-label="reply">
+                                    <span class="icon is-small">
+                                        <a class="" aria-label="reply">
+                                            <span class="icon is-medium">
+                                                <svg viewBox="0 0 40 40" focusable="false" role="presentation"
+                                                    class="css-9i4l85">
+                                                    <g stroke="currentcolor" stroke-width="2" fill="none">
+                                                        <path d="M20 4L36 16.2229L29.8885 36H10.1115L4 16.2229L20 4Z"
+                                                            stroke="#08BDBA">
+                                                        </path>
+                                                        <circle cx="20" cy="4" r="5" fill="#08BDBA" stroke="#FFF">
+                                                        </circle>
+                                                        <circle cx="10" cy="36" r="5" fill="#08BDBA" stroke="#FFF">
+                                                        </circle>
+                                                        <circle cx="4" cy="17" r="5" fill="#08BDBA" stroke="#FFF">
+                                                        </circle>
+                                                        <circle cx="36" cy="17" r="5" fill="#08BDBA" stroke="#FFF">
+                                                        </circle>
+                                                        <circle cx="30" cy="36" r="5" fill="#08BDBA" stroke="#FFF">
+                                                        </circle>
+                                                    </g>
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="columns" style="margin-top: 40px;">
+                            <div class="column">
+                                <a class="" aria-label="reply">
+                                    <span class="icon  is-medium">
+                                        <svg viewBox="0 0 40 40" focusable="false" role="presentation"
+                                            class="css-1of6a44">
+                                            <circle cx="20" cy="20" r="18" stroke="#08BDBA" fill="#08BDBA"
+                                                stroke-width="2">
+                                            </circle>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="level-item column">
+                                <input type="range" class="styled-slider slider-progress" style="width: 12em;"
+                                    onclick=" rangeElement2()" id="rangeElement2" />
+                            </div>
+                            <div class=" column ">
+                                <a class="" aria-label="reply">
+                                    <span class="icon  is-medium">
+                                        <svg viewBox="0 0 40 40" focusable="false" role="presentation"
+                                            class="css-9i4l85">
+                                            <path stroke="#08BDBA" fill="none" stroke-width="2"
+                                                d="M21.5856 8.93747C24.1222 10.1824 28.7589 8.54461 32.6083 9.46898C36.4577 10.3934 39.5199 13.8799 37.1913 15.2185C34.8627 16.5571 27.1434 15.7478 23.9803 18.2435C20.8171 20.7391 22.2102 26.5396 20.617 31.0769C19.0239 35.6142 14.4445 38.8883 12.514 36.6969C10.5835 34.5054 11.3019 26.8485 9.45474 22.5957C7.60761 18.3429 3.19498 17.4943 2.21843 15.6908C1.24187 13.8872 3.7014 11.1287 6.38819 9.81508C9.07499 8.50151 11.9891 8.63289 13.9916 7.14413C15.9942 5.65536 17.0852 2.54645 17.8489 3.05575C18.6126 3.56505 19.0491 7.69258 21.5856 8.93747Z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="columns" style="margin-top: 40px; margin-bottom: 40px;">
+                            <div class=" column">
+                                <button class="ButtonBorder" onclick="downloadImage()">
+                                    <a class="" aria-label="reply">
+                                        <span class="icon is-medium">
+                                            <svg viewBox="0 0 24 24" focusable="false" role="presentation"
+                                                aria-hidden="true" class="css-1im46kq">
+                                                <path stroke="#08BDBA" stroke-width="2" fill="none"
+                                                    d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7 5V12m4 5l-4 4-4-4">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="level-item  column">
+                                <button class="ButtonBorder js-modal-trigger" data-target="modal-js-example">
+                                    <a class="level-item" aria-label="reply">
+                                        <span class="icon is-medium">
+                                            <svg viewBox="0 0 24 24" focusable="false" role="presentation"
+                                                aria-hidden="true" class="css-1im46kq">
+                                                <g stroke="#08BDBA" stroke-width="2" fill="none">
+                                                    <polyline points="16 18 22 12 16 6"></polyline>
+                                                    <polyline points="8 6 2 12 8 18"></polyline>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="level-item column">
+                                <button class="border" onclick="rangeElement3()">
+                                    <a class="level-item" aria-label="reply">
+                                        <span class="icon is-medium">
+                                            <svg viewBox="0 0 32 32" focusable="false" role="presentation"
+                                                class="css-1oizbix">
+                                                <path stroke="none" fill="#f5f5f5"
+                                                    d="M7.38 5.555l15.592-1.367A3.419 3.419 0 0126.673 7.3L28.05 23.06a3.422 3.422 0 01-3.106 3.71L9.352 28.137a3.419 3.419 0 01-3.702-3.113L4.275 9.265a3.422 3.422 0 013.106-3.71zm.2 2.274a1.14 1.14 0 00-1.036 1.237l1.375 15.759a1.14 1.14 0 001.234 1.038l15.591-1.368a1.14 1.14 0 001.036-1.236l-1.376-15.76a1.14 1.14 0 00-1.234-1.037L7.58 7.829zm3.254 5.39a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.839zm10.065-.883a1.69 1.69 0 01-1.826-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.84zM11.72 23.373a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.545 1.692 1.692 0 01-1.53 1.84zm10.065-.883a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.84zm-5.476-4.635a1.69 1.69 0 01-1.825-1.546 1.692 1.692 0 011.53-1.839 1.69 1.69 0 011.825 1.545 1.692 1.692 0 01-1.53 1.84zM29.183 6.823l-.015.002A.915.915 0 0128.167 6c-.265-2.544-2.523-4.39-5.045-4.121h-.007a.916.916 0 01-1.002-.824.922.922 0 01.808-1.018h.002l.007-.001a6.387 6.387 0 014.718 1.408 6.498 6.498 0 012.347 4.363.922.922 0 01-.812 1.016zM8.547 32h-.008a6.395 6.395 0 01-4.578-1.818 6.51 6.51 0 01-1.96-4.553.92.92 0 01.895-.942h.016c.503-.008.917.4.926.91.044 2.559 2.134 4.595 4.67 4.55h.006a.918.918 0 01.927.91.92.92 0 01-.894.943z">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!--<div class="box" id="buttonDiv">
-                    <div class="control ">
-                        <input class="" id="inputValue" type="button" value="#FF0066"
-                            style="padding: 18px 217px 12px 10px ; margin-bottom: 20px;" onclick="buttonColor()"
-                            oninput="updateInput(value)" />
-
-                        <button class=" icon is-right radiusButtonIcon" onclick="buttonColor()" id="buttonColor">
-
-                        </button>
-                    </div>
-                    <div class="buttons">
-                        <button class="button" style="background: #FF0066;" id="btn1"
-                            onclick="btn1('#FF0066')"></button>
-                        <button class="button" style="background: #8A3FFC;" id="btn2"
-                            onclick="btn2('#8A3FFC')"></button>
-                        <button class="button" style="background: #FA4D56;" id="btn3"
-                            onclick="btn3('#FA4D56')"></button>
-                        <button class="button" style="background: #F1C21B;" id="btn4"
-                            onclick="btn4('#F1C21B')"></button>
-                        <button class="button" style="background: #08BDBA;" id="btn5"
-                            onclick="btn5('#08BDBA')"></button>
-                        <button class="button" style="background: #0F62FE;" id="btn6"
-                            onclick="btn6('#0F62FE')"></button>
-                        <button class="button" style="background: #24A148;" id="btn7"
-                            onclick="btn7('#24A148')"></button>
-                    </div>
-
-                    <div class="buttons">
-                        <button class="button" style="background: #A7F0BA;" id="btn8"
-                            onclick="btn8('#A7F0BA')"></button>
-                        <button class="button" style="background: #9EF0F0;" id="btn9"
-                            onclick="btn9('#9EF0F0')"></button>
-                        <button class="button" style="background: #BAE6FF;" id="btn10"
-                            onclick="btn10('#BAE6FF')"></button>
-                        <button class="button" style="background: #D0E2FF;" id="btn11"
-                            onclick="btn11('#D0E2FF')"></button>
-                        <button class="button" style="background: #E8DAFF;" id="btn12"
-                            onclick="btn12('#E8DAFF')"></button>
-                        <button class="button" style="background: #FFD6E8;" id="btn13"
-                            onclick="btn13('#FFD6E8')"></button>
-                        <button class="button" style="background: #F2F4F8;" id="btn14"
-                            onclick="btn14('#F2F4F8')"></button>
-                    </div>
-                </div>-->
-
             </div>
-            <div class="column secondDiv" id="svgDownloadImg">
+            <div class="column secondDiv" id="svgDownloadImg" style="margin-right: 128px;">
                 <figure class="image is-150x150" style="margin: 20px 20px 20px 20px;" id="svgImg">
                     <svg viewBox="0 0 200 200" class="css-lld9th" id="svgCodeCopy">
                         <g transform="translate(100 100)">
@@ -94,80 +212,10 @@
                                 fill="#08BDBA"></path>
                         </g>
                     </svg>
-                    <!-- <svg width=500 height=500>
-                        <polygon id="poly" points="50,25 86,45.83 86,87.5 50,108.3 14,87.53 14,45.83"></polygon>
-                    </svg> -->
                 </figure>
-
             </div>
-            <div class="column has-text-right">
-                <!--<a class="level-item" aria-label="reply" style="margin-left: 315px; ">
-                    <span class="icon is-small ">
-                        <svg viewBox="0 0 24 24" focusable="false" role="presentation" class="css-1im46kq">
-                            <path fill="#08BDBA"
-                                d="M24 4.37a9.6 9.6 0 0 1-2.83.8 5.04 5.04 0 0 0 2.17-2.8c-.95.58-2 1-3.13 1.22A4.86 4.86 0 0 0 16.61 2a4.99 4.99 0 0 0-4.79 6.2A13.87 13.87 0 0 1 1.67 2.92 5.12 5.12 0 0 0 3.2 9.67a4.82 4.82 0 0 1-2.23-.64v.07c0 2.44 1.7 4.48 3.95 4.95a4.84 4.84 0 0 1-2.22.08c.63 2.01 2.45 3.47 4.6 3.51A9.72 9.72 0 0 1 0 19.74 13.68 13.68 0 0 0 7.55 22c9.06 0 14-7.7 14-14.37v-.65c.96-.71 1.79-1.6 2.45-2.61z">
-                            </path>
-                        </svg>
-                    </span>
-                    Share
-                </a>-->
-
-                <!--<div class="box" id="buttonDiv">
-                    <div class="control ">
-                        <input type="range" class="styled-slider slider-progress" style="width: 23em;"
-                            onclick="rangeElement1()" id="rangeElement1" />
-                    </div>
-                    <div class="control ">
-                        <input type="range" class="styled-slider slider-progress" style="width: 23em;"
-                            onclick=" rangeElement2()" id="rangeElement2" />
-                    </div>
-
-                    <div class="level-item" style="margin: 22px 249px 1px 1px;">
-                        <button class="ButtonBorder" onclick="downloadImage()">
-                            <a class="level-item" aria-label="reply">
-                                <span class="icon is-medium">
-                                    <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true"
-                                        class="css-1im46kq">
-                                        <path stroke="#08BDBA" stroke-width="2" fill="#f5f5f5"
-                                            d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7 5V12m4 5l-4 4-4-4">
-                                        </path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </button>
-                    </div>
-
-                    <div style="margin: -50px 1px 1px 1px;">
-                        <button class="ButtonBorder js-modal-trigger" data-target="modal-js-example">
-                            <a class="level-item" aria-label="reply">
-                                <span class="icon is-medium">
-                                    <svg viewBox="0 0 24 24" focusable="false" role="presentation" aria-hidden="true"
-                                        class="css-1im46kq">
-                                        <g stroke="#08BDBA" stroke-width="2" fill="none">
-                                            <polyline points="16 18 22 12 16 6"></polyline>
-                                            <polyline points="8 6 2 12 8 18"></polyline>
-                                        </g>
-                                    </svg>
-                                </span>
-                            </a>
-                        </button>
-                    </div>
-
-                    <div class="level-item  ">
-                        <button class="border">
-                            <a class="level-item" aria-label="reply">
-                                <span class="icon is-medium">
-                                    <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="css-1oizbix">
-                                        <path stroke="none" fill="#f5f5f5"
-                                            d="M7.38 5.555l15.592-1.367A3.419 3.419 0 0126.673 7.3L28.05 23.06a3.422 3.422 0 01-3.106 3.71L9.352 28.137a3.419 3.419 0 01-3.702-3.113L4.275 9.265a3.422 3.422 0 013.106-3.71zm.2 2.274a1.14 1.14 0 00-1.036 1.237l1.375 15.759a1.14 1.14 0 001.234 1.038l15.591-1.368a1.14 1.14 0 001.036-1.236l-1.376-15.76a1.14 1.14 0 00-1.234-1.037L7.58 7.829zm3.254 5.39a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.839zm10.065-.883a1.69 1.69 0 01-1.826-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.84zM11.72 23.373a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.545 1.692 1.692 0 01-1.53 1.84zm10.065-.883a1.69 1.69 0 01-1.825-1.545 1.692 1.692 0 011.53-1.84 1.69 1.69 0 011.825 1.546 1.692 1.692 0 01-1.53 1.84zm-5.476-4.635a1.69 1.69 0 01-1.825-1.546 1.692 1.692 0 011.53-1.839 1.69 1.69 0 011.825 1.545 1.692 1.692 0 01-1.53 1.84zM29.183 6.823l-.015.002A.915.915 0 0128.167 6c-.265-2.544-2.523-4.39-5.045-4.121h-.007a.916.916 0 01-1.002-.824.922.922 0 01.808-1.018h.002l.007-.001a6.387 6.387 0 014.718 1.408 6.498 6.498 0 012.347 4.363.922.922 0 01-.812 1.016zM8.547 32h-.008a6.395 6.395 0 01-4.578-1.818 6.51 6.51 0 01-1.96-4.553.92.92 0 01.895-.942h.016c.503-.008.917.4.926.91.044 2.559 2.134 4.595 4.67 4.55h.006a.918.918 0 01.927.91.92.92 0 01-.894.943z">
-                                        </path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </button>
-                    </div>
-                </div>-->
-            </div>
+            <!--<div class="column has-text-right">
+            </div>-->
         </div>
         <!--start popup-->
         <div id="modal-js-example" class="modal">
@@ -187,12 +235,11 @@
                         </g>
                     </svg>
                     </textarea>
-                    <!-- <input disabled type="text" value="Hello World" id="myInput">-->
+
                 </section>
                 <footer class="modal-card-foot">
                     <button class="Copy SVG to clipboard" style="background: #08BDBA; color: white ;"
-                        onclick="copyText()">Copy SVG to clipboard</button>
-                    <!--<button class="button">Cancel</button>-->
+                        onclick="myFunction()">Copy SVG to clipboard</button>
                 </footer>
             </div>
         </div>
@@ -200,17 +247,17 @@
     <!--end popup-->
     <div class="backgroundImg ">
         <div class="backgroundcolor">
-            <div class="box boxmargin">
-                <nav class="level">
-                    <div class="control has-icons-left has-icons-right">
+            <!-- <div class="box boxmargin">
+                <nav class="level">-->
+            <!--<div class="control has-icons-left has-icons-right">
                         <input class="" id="inputValue" type="button" value="#FF0066"
                             style="padding: 16px 69px 10px 10px;" onclick="buttonColor()"
                             oninput="updateInput(value)" />
                         <button class=" icon is-right radiusButtonIcon" onclick="buttonColor()" id="buttonColor">
                         </button>
-                    </div>
+                    </div>-->
 
-                    <div class="box" id="buttonDiv" style="display: none;">
+            <!--<div class="box" id="buttonDiv" style="display: none;">
                         <div class="buttons">
                             <button class="button" style="background: #FF0066;" id="btn1"
                                 onclick="btn1('#FF0066')"></button>
@@ -244,8 +291,8 @@
                             <button class="button" style="background: #F2F4F8;" id="btn14"
                                 onclick="btn14('#F2F4F8')"></button>
                         </div>
-                    </div>
-                    <div class="level-item ">
+                    </div>-->
+            <!--<div class="level-item ">
                         <a class="level-item" aria-label="reply">
                             <span class="icon is-medium">
                                 <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="css-1of6a44">
@@ -259,17 +306,12 @@
                             </span>
                         </a>
 
-                    </div>
-                    <div class="level-item ">
-                        <!--<progress class="progress is-small" value="20" max="100">20%</progress>-->
+                    </div>-->
+            <!--<div class="level-item ">
                         <input type="range" class="styled-slider slider-progress" style="width: 12em;"
                             onclick="rangeElement1()" id="rangeElement1" />
-                        <!-- <button class="icon  radiusButton">
-
-                        </button>-->
-                    </div>
-
-                    <div class="level-item">
+                    </div>-->
+            <!--<div class="level-item">
                         <a class="level-item" aria-label="reply">
                             <span class="icon is-small">
                                 <a class="level-item" aria-label="reply">
@@ -296,8 +338,8 @@
                                 </a>
                             </span>
                         </a>
-                    </div>
-                    <div class="level-item">
+                    </div>-->
+            <!--<div class="level-item">
                         <a class="level-item" aria-label="reply">
                             <span class="icon  is-medium">
                                 <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="css-1of6a44">
@@ -306,28 +348,12 @@
                                 </svg>
                             </span>
                         </a>
-                        <!--<svg viewBox="0 0 40 40" focusable="false" role="presentation" class="css-9i4l85">
-                            <g stroke="currentcolor" stroke-width="2" fill="none">
-                                <path d="M20 4L36 16.2229L29.8885 36H10.1115L4 16.2229L20 4Z" stroke="currentcolor">
-                                </path>
-                                <circle cx="20" cy="4" r="5" fill="currentcolor" stroke="#FFF"></circle>
-                                <circle cx="10" cy="36" r="5" fill="currentcolor" stroke="#FFF"></circle>
-                                <circle cx="4" cy="17" r="5" fill="currentcolor" stroke="#FFF"></circle>
-                                <circle cx="36" cy="17" r="5" fill="currentcolor" stroke="#FFF"></circle>
-                                <circle cx="30" cy="36" r="5" fill="currentcolor" stroke="#FFF"></circle>
-                            </g>
-                        </svg>-->
-                    </div>
-                    <div class="level-item">
-                        <!--<progress class="progress is-small" value="20" max="100">20%</progress>-->
+                    </div>-->
+            <!--<div class="level-item">
                         <input type="range" class="styled-slider slider-progress" style="width: 12em;"
                             onclick=" rangeElement2()" id="rangeElement2" />
-                        <!-- <button class="icon  radiusButton">
-
-                        </button>-->
-                    </div>
-
-                    <div class="level-item  ">
+                    </div>-->
+            <!--<div class="level-item  ">
                         <a class="level-item" aria-label="reply">
                             <span class="icon  is-medium">
                                 <svg viewBox="0 0 40 40" focusable="false" role="presentation" class="css-9i4l85">
@@ -337,8 +363,8 @@
                                 </svg>
                             </span>
                         </a>
-                    </div>
-                    <div class="level-item">
+                    </div>-->
+            <!--<div class="level-item">
                         <button class="ButtonBorder" onclick="downloadImage()">
                             <a class="level-item" aria-label="reply">
                                 <span class="icon is-medium">
@@ -379,9 +405,9 @@
                                 </span>
                             </a>
                         </button>
-                    </div>
-                </nav>
-            </div>
+                    </div>-->
+            <!--</nav>
+            </div>-->
             <div class="cantant">
                 <div>
                     <p class="is-size-4">Blobmaker is a free generative design tool made with 💕 by</p>
