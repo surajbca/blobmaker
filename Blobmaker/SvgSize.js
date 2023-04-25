@@ -1,6 +1,8 @@
 function rangeElement1() {
+  const buttonDiv = document.getElementById("buttonDiv");
+  buttonDiv.style.display = "none";
   const poly = document.getElementById("circle1");
-
+  poly.style.transition = "0s";
   const transform = `translate(${getRandomArbitrary(
     0,
     100
@@ -18,7 +20,11 @@ function getRandomArbitrary(min, max) {
 }
 
 function rangeElement2() {
-  const poly = document.getElementById("circle1");
+  const buttonDiv = document.getElementById("buttonDiv");
+  buttonDiv.style.display = "none";
+
+  const poly1 = document.getElementById("circle1");
+  poly1.style.transition = "2s";
 
   const transform = `translate(${getRandomArbitrary(
     0,
@@ -28,8 +34,8 @@ function rangeElement2() {
     5
   )} ${getRandomArbitrary(1, 5)})`;
 
-  //alert(poly);
-  poly.setAttribute("transform", transform);
+  //alert(poly1);
+  poly1.setAttribute("transform", transform);
 }
 
 function getRandomArbitrary(min, max) {
@@ -37,8 +43,11 @@ function getRandomArbitrary(min, max) {
 }
 
 function rangeElement3() {
-  const poly = document.getElementById("circle1");
+  const buttonDiv = document.getElementById("buttonDiv");
+  buttonDiv.style.display = "none";
 
+  const poly2 = document.getElementById("circle1");
+  poly2.style.transition = "1s";
   const transform = `translate(${getRandomArbitrary(
     0,
     100
@@ -47,8 +56,8 @@ function rangeElement3() {
     5
   )} ${getRandomArbitrary(1, 5)})`;
 
-  //alert(poly);
-  poly.setAttribute("transform", transform);
+  //alert(poly2);
+  poly2.setAttribute("transform", transform);
 }
 
 function getRandomArbitrary(min, max) {

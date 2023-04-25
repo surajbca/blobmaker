@@ -1,3 +1,4 @@
+/* start model function*/
 document.addEventListener("DOMContentLoaded", () => {
   // Functions to open and close a modal
   function openModal($el) {
@@ -47,33 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+/*end model function*/
 
-/*html tag*/
-/*
-function htmlEncode(html) {
-  html = trim(html);
-  return html.replace(/[&"'\<\>]/g, function (c) {
-    switch (c) {
-      case "&":
-        return "&amp;";
-      case "'":
-        return "&#39;";
-      case '"':
-        return "&quot;";
-      case "<":
-        return "&lt;";
-      default:
-        return "&gt;";
-    }
-  });
-}*/
+function copyText() {
+  const buttonDiv = document.getElementById("buttonDiv");
+  buttonDiv.style.display = "none";
 
-//"#CopySvgCode".html(htmlEncode("#CopySvgCode".html()));
-
-function myFunction() {
-  // Get the text field
-  alert("");
   var copyText = document.getElementById("myInput");
+  copyText.style.background = "#08BDBA";
+  copyText.style.color = "white";
 
   // Select the text field
   copyText.select();
@@ -84,12 +67,9 @@ function myFunction() {
 
   // Alert the copied text
   //alert("Copied the text: " + copyText.value);
-}
-
-function copyText() {
-  var copyText = document.getElementById("myInput");
+  /*var copyText = document.getElementById("myInput");
   copyText.style.background = "#08BDBA";
   copyText.style.color = "white";
   navigator.clipboard.writeText(copyText.innerText);
-  alert("Copied the text: " + copyText.innerText);
+  alert("Copied the text: " + copyText.innerText);*/
 }

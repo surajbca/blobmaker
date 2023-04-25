@@ -2,6 +2,7 @@ function buttonColor() {
  
   const buttonDiv = document.getElementById("buttonDiv");
   buttonDiv.style.display = "";
+  /*buttonDiv.classList.toggle('hidden');*/
 
 }
 
