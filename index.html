@@ -35,7 +35,6 @@
                             <div class="control has-icons-left has-icons-right column">
                                 <input class="" id="inputValue" type="text" value="#FF0066"
                                     style="padding: 16px 40px 10px 10px;" oninput="updateInput(value)" />
-
                             </div>
                             <div class="column">
                                 <button class=" icon is-right radiusButtonIcon" onclick="buttonColor()" id="buttonColor"
@@ -95,8 +94,8 @@
                                 </a>
                             </div>
                             <div class=" column">
-                                <input type="range" class="styled-slider slider-progress" style="width: 12em;"
-                                    onclick="rangeElement1()" id="rangeElement1" />
+                                <input type="range" class="styled-slider slider-progress" min="0" max="10" value="15"
+                                    style="width: 12em;" onclick="rangeElement1(this.value)" id="rangeElement1" />
                             </div>
                             <div class="column">
                                 <a class="" aria-label="reply">
@@ -141,8 +140,8 @@
                                 </a>
                             </div>
                             <div class=" column">
-                                <input type="range" class="styled-slider slider-progress" style="width: 12em;"
-                                    onclick=" rangeElement2()" id="rangeElement2" />
+                                <input type="range" class="styled-slider slider-progress" min="1" max="10" value="15"
+                                    style="width: 12em;" onclick="rangeElement2(this.value)" id="rangeElement2" />
                             </div>
                             <div class=" column ">
                                 <a class="" aria-label="reply">
@@ -172,7 +171,7 @@
                                     </a>
                                 </button>
                             </div>
-                            <div class="  column">
+                            <div class="column">
                                 <button class="ButtonBorder js-modal-trigger" data-target="modal-js-example">
                                     <a class="" aria-label="reply">
                                         <span class="icon is-medium">
@@ -201,6 +200,7 @@
                                     </a>
                                 </button>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -218,6 +218,7 @@
                     </svg>
                 </figure>
             </div>
+
             <!--end second column-->
             <!--<div class="column has-text-right">
             </div>-->
