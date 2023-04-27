@@ -73,3 +73,10 @@ function copyText() {
   navigator.clipboard.writeText(copyText.innerText);
   alert("Copied the text: " + copyText.innerText);*/
 }
+
+function updateInput(innerHTML) {
+  alert(innerHTML);
+
+  document.getElementById("myInput").value =
+    document.getElementById("svgImg").innerHTML;
+}

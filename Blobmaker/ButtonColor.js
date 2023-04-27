@@ -1,17 +1,15 @@
 function buttonColor() {
- 
   const buttonDiv = document.getElementById("buttonDiv");
   buttonDiv.style.display = "";
   /*buttonDiv.classList.toggle('hidden');*/
-
 }
 
-function updateInput(value) {
+/*function updateInput(value) {
   document.getElementById("inputValue") =
     document.getElementById("btn1").value;
      document.getElementById("inputValue") =
     document.getElementById("btn2").value;
-}
+}*/
 
 function btn1(color) {
   const btn1 = document.getElementById("buttonColor");
@@ -44,9 +42,9 @@ function btn4(color) {
   const circle4 = document.getElementById("circle1");
   const btn4 = document.getElementById("buttonColor");
   btn4.style.background = color;
- btn4.style.border = color;
+  btn4.style.border = color;
   circle4.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn5(color) {
@@ -55,7 +53,7 @@ function btn5(color) {
   btn5.style.background = color;
   btn5.style.border = color;
   circle5.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn6(color) {
@@ -63,8 +61,8 @@ function btn6(color) {
   const btn6 = document.getElementById("buttonColor");
   btn6.style.background = color;
   btn6.style.border = color;
-   circle6.style.fill = color;
-    document.getElementById("inputValue").value = color;
+  circle6.style.fill = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn7(color) {
@@ -73,7 +71,7 @@ function btn7(color) {
   btn7.style.background = color;
   btn7.style.border = color;
   circle7.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn8(color) {
@@ -82,16 +80,16 @@ function btn8(color) {
   btn8.style.background = color;
   btn8.style.border = color;
   circle8.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn9(color) {
   const circle9 = document.getElementById("circle1");
   const btn9 = document.getElementById("buttonColor");
   btn9.style.background = color;
-   btn9.style.border = color;
-   circle9.style.fill = color;
-    document.getElementById("inputValue").value = color;
+  btn9.style.border = color;
+  circle9.style.fill = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn10(color) {
@@ -100,7 +98,7 @@ function btn10(color) {
   btn10.style.background = color;
   btn10.style.border = color;
   circle10.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn11(color) {
@@ -109,7 +107,7 @@ function btn11(color) {
   btn11.style.background = color;
   btn11.style.border = color;
   circle11.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn12(color) {
@@ -118,7 +116,7 @@ function btn12(color) {
   btn12.style.background = color;
   btn12.style.border = color;
   circle12.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn13(color) {
@@ -127,7 +125,7 @@ function btn13(color) {
   btn13.style.background = color;
   btn13.style.border = color;
   circle13.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
 
 function btn14(color) {
@@ -136,6 +134,5 @@ function btn14(color) {
   btn14.style.background = color;
   btn14.style.border = color;
   circle14.style.fill = color;
-   document.getElementById("inputValue").value = color;
+  document.getElementById("inputValue").value = color;
 }
-

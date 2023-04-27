@@ -32,8 +32,8 @@
                 <div class="mr-6">
                     <div class="box" style="margin-left: 153px; ">
                         <div class="columns" style="margin-top: 50px;">
-                            <div class="control has-icons-left has-icons-right column">
-                                <input class="" id="inputValue" type="text" value="#FF0066"
+                            <div class="control has-icons-left has-icons-right column ml-5">
+                                <input class="" id="inputValue" type="text" value="#08BDBA"
                                     style="padding: 16px 40px 10px 10px;" oninput="updateInput(value)" />
                             </div>
                             <div class="column">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                         <div class="columns" style="margin-top: 60px;">
-                            <div class=" column">
+                            <div class=" column ml-5">
                                 <a class="" aria-label="reply">
                                     <span class="icon is-medium">
                                         <svg viewBox="0 0 40 40" focusable="false" role="presentation"
@@ -94,7 +94,7 @@
                                 </a>
                             </div>
                             <div class=" column">
-                                <input type="range" class="styled-slider slider-progress" min="0" max="10" value="15"
+                                <input type="range" class="styled-slider slider-progress" min="1" max="10" value="15"
                                     style="width: 12em;" onclick="rangeElement1(this.value)" id="rangeElement1" />
                             </div>
                             <div class="column">
@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <div class="columns" style="margin-top: 60px;">
-                            <div class="column">
+                            <div class="column ml-5">
                                 <a class="" aria-label="reply">
                                     <span class="icon  is-medium">
                                         <svg viewBox="0 0 40 40" focusable="false" role="presentation"
@@ -143,7 +143,7 @@
                                 <input type="range" class="styled-slider slider-progress" min="1" max="10" value="15"
                                     style="width: 12em;" onclick="rangeElement2(this.value)" id="rangeElement2" />
                             </div>
-                            <div class=" column ">
+                            <div class=" column ml-5">
                                 <a class="" aria-label="reply">
                                     <span class="icon  is-medium">
                                         <svg viewBox="0 0 40 40" focusable="false" role="presentation"
@@ -157,7 +157,7 @@
                             </div>
                         </div>
                         <div class="columns" style="margin-top: 75px; margin-bottom: 75px;">
-                            <div class=" column">
+                            <div class=" column ml-5">
                                 <button class="ButtonBorder" onclick="downloadImage()">
                                     <a class="" aria-label="reply">
                                         <span class="icon is-medium">
@@ -171,7 +171,7 @@
                                     </a>
                                 </button>
                             </div>
-                            <div class="column">
+                            <div class="column ml-5">
                                 <button class="ButtonBorder js-modal-trigger" data-target="modal-js-example">
                                     <a class="" aria-label="reply">
                                         <span class="icon is-medium">
@@ -186,7 +186,7 @@
                                     </a>
                                 </button>
                             </div>
-                            <div class="column">
+                            <div class="column ml-6">
                                 <button class="border" onclick="rangeElement3()">
                                     <a class="" aria-label="reply">
                                         <span class="icon is-medium">
@@ -208,8 +208,8 @@
 
             <!--start second column-->
             <div class="column secondDiv" id="svgDownloadImg" style="margin-right: 128px;">
-                <figure class="image is-150x150" style="margin: 120px 120px 120px 120px;" id="svgImg">
-                    <svg viewBox="0 0 200 200" class="css-lld9th" id="svgCodeCopy">
+                <figure class="image is-150x150" style="margin: 20px 20px 20px 20px;" id="svgImg">
+                    <svg viewBox="0 0 200 200" class="css-lld9th" id="svgCodeCopy" oninput="updateInput()">
                         <g transform="translate(100 100)">
                             <path id="circle1"
                                 d="M60.6,-19.4C68.8,5.6,59.1,36.7,37.6,52.4C16.2,68.2,-16.9,68.5,-37.5,53.1C-58.2,37.8,-66.3,6.8,-58,-18.4C-49.7,-43.5,-24.8,-62.8,0.7,-63.1C26.2,-63.3,52.4,-44.4,60.6,-19.4Z"
