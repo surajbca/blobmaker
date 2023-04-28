@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Functions to open and close a modal
   function openModal($el) {
     $el.classList.add("is-active");
+    var copyText = document.getElementById("myInput");
+    copyText.style.background = "";
+    copyText.style.color = "";
+
+    copyText.value = svgImg.innerHTML;
+    //alert(svgImg.innerHTML);
   }
 
   function closeModal($el) {
@@ -58,6 +64,8 @@ function copyText() {
   copyText.style.background = "#08BDBA";
   copyText.style.color = "white";
 
+  // copyText.value = svgImg.innerHTML;
+  // alert(copyText.value);
   // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 99999); // For mobile devices
@@ -78,5 +86,5 @@ function updateInput(innerHTML) {
   alert(innerHTML);
 
   document.getElementById("myInput").value =
-    document.getElementById("svgImg").innerHTML;
+    document.getElementById("svgCodeCopy").innerHTML;
 }

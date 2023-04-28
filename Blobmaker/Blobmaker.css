@@ -3,9 +3,6 @@
     background-image: url("./backgroundimg.svg");
 }
 .secondDiv{
-   /* border: red;
-        height: 486px;
-        background: red;*/
         z-index: -1;
             border-width: 0.125rem;
             border-image: initial;
@@ -88,78 +85,6 @@ button {
     display: block;
 }
 
-/* svg css */
-@import url('https://fonts.googleapis.com/css?family=Hind');
 
-:root {
-    --radius-1: 70%;
-    --radius-2: 30%;
-    --radius-3: 30%;
-    --radius-4: 70%;
-    --radius-5: 60%;
-    --radius-6: 40%;
-    --radius-7: 60%;
-    --radius-8: 40%;
-}
 
-/*body {
-    background: #e8e8e8;
-    font: normal 18px/1 "Hind", sans-serif;
-}*/
 
-/*.container {
-    width: 250px;
-    background: #ffffff;
-    border-radius: 5px;
-    padding: 15px;
-    box-shadow: 0 0 20px 3px rgba(0, 0, 0, .13);
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}*/
-
-.container>label {
-    margin-top: 5px;
-}
-
-.container>input[type="range"] {
-    width: 100%;
-    margin: 10px 0;
-}
-
-.container>input[type="range"]:before {
-    content: attr(data-value);
-    background: #2E2E2E;
-    color: #ffffff;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    text-align: center;
-    font: normal 1em/40px sans-serif;
-    margin-right: 5px;
-    box-shadow: 5px 0 0 0 #ffffff;
-}
-
-.blob {
-    width: 360px;
-    height: 360px;
-    border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
-    background-color: #21D4FD;
-    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: -99;
-}
-
-.container>.code {
-    margin-top: 20px;
-    background: rgba(0, 0, 0, .8);
-    padding: 10px;
-    color: rgba(255, 255, 255, .8);
-    border-radius: 5px;
-    font-size: 16px;
-    font-style: italic;
-}
